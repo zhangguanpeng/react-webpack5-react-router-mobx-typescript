@@ -1,6 +1,6 @@
 function getUrlParam(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
+    const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
+    const r = window.location.search.substr(1).match(reg);
     if (r != null) {
         return decodeURIComponent(r[2]);
     }
@@ -9,4 +9,4 @@ function getUrlParam(name) {
 
 export {
     getUrlParam,
-}
+};

@@ -1,25 +1,26 @@
 const webpack = require('webpack');
 const path = require('path');
 const { merge } = require('webpack-merge');
-const webpackConfigBase = require('./webpack.base.config');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 // 用于将打包目录中上一次打包的文件清除
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpackConfigBase = require('./webpack.base.config');
 
 function concatPath(relatedPath) {
-    return path.join(__dirname, relatedPath)
+    return path.join(__dirname, relatedPath);
 }
 
 const webpackConfigProd = {
-    mode: "production",
+    mode: 'production',
     // 提取 chunks 之间共享的通用模块
     optimization: {
         runtimeChunk: {
-            name: 'manifest'
+            name: 'manifest',
         },
         minimizer: [], // [new UglifyJsPlugin({...})]
-        splitChunks:{
+        splitChunks: {
             chunks: 'async',
             minSize: 30000,
             minChunks: 1,
@@ -32,7 +33,7 @@ const webpackConfigProd = {
                     chunks: 'initial',
                     priority: -10,
                     reuseExistingChunk: false,
-                    test: /node_modules\/(.*)\.js/
+                    test: /node_modules\/(.*)\.js/,
                 },
                 styles: {
                     name: 'styles',
@@ -40,10 +41,10 @@ const webpackConfigProd = {
                     chunks: 'all',
                     minChunks: 1,
                     reuseExistingChunk: true,
-                    enforce: true
-                }
-            }
-        }
+                    enforce: true,
+                },
+            },
+        },
     },
     plugins: [
         // 定义环境变量为开发环境
@@ -51,12 +52,12 @@ const webpackConfigProd = {
             'process.env.NODE_ENV': JSON.stringify('production'),
             IS_DEVELOPMETN: false,
         }),
-        // 将打包后的资源注入到html文件内    
+        // 将打包后的资源注入到html文件内
         new HtmlWebpackPlugin({
             inject: 'body',
             title: 'React APP',
             filename: 'index.html',
-            template: concatPath('../app/index.html')
+            template: concatPath('../app/index.html'),
         }),
         // 分析代码
         new BundleAnalyzerPlugin({ analyzerPort: 3011 }),
@@ -64,6 +65,6 @@ const webpackConfigProd = {
             protectWebpackAssets: true,
         }),
     ],
-}
-  
-module.exports = merge(webpackConfigBase, webpackConfigProd)
+};
+
+module.exports = merge(webpackConfigBase, webpackConfigProd);

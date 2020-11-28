@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const webpackConfigBase = require('./webpack.base.config');
 // open-browser-webpack-plugin目前不知道webpack4+，因此选用了open-browser-webpack4-plugin
 const OpenBrowserPlugin = require('open-browser-webpack4-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpackConfigBase = require('./webpack.base.config');
 
 const PORT = 8888;
 function concatPath(relatedPath) {
@@ -18,15 +18,15 @@ const webpackConfigDev = {
             'process.env.NODE_ENV': JSON.stringify('development'),
             IS_DEVELOPMETN: true,
         }),
-        // 将打包后的资源注入到html文件内    
+        // 将打包后的资源注入到html文件内
         new HtmlWebpackPlugin({
             inject: 'body',
             title: 'React APP',
             filename: 'index.html',
-            template: concatPath('../app/index.html')
+            template: concatPath('../app/index.html'),
         }),
         new OpenBrowserPlugin({
-            url: `http://localhost:${PORT}`,
+            url: `http://localhost:${PORT}/#/`,
         }),
     ],
     devtool: 'source-map',
@@ -37,6 +37,6 @@ const webpackConfigDev = {
         host: '0.0.0.0',
         port: PORT,
     },
-}
+};
 
 module.exports = merge(webpackConfigBase, webpackConfigDev);
