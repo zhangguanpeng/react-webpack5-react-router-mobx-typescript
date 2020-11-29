@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import Nav from 'common/components/Nav/index';
 import './style.scss';
 
 interface IProps extends RouteComponentProps {}
@@ -14,7 +15,7 @@ class LoginPage extends Component<IProps> {
     render() {
         return (
             <div className="login-page-box">
-                这里是登录页
+                <Nav />
             </div>
         );
     }

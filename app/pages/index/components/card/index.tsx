@@ -1,5 +1,5 @@
 import React from 'react';
-import { getUrlParam } from 'common/url';
+import { getUrlParam } from 'common/utils/url';
 import './style.scss';
 
 interface IProps {
