@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import Card from './components/card/index';
+import IndexNav from './components/Nav/index';
 import './style.scss';
 
 interface IProps extends RouteComponentProps {}
@@ -19,8 +19,11 @@ class IndexPage extends Component<IProps> {
     render() {
         return (
             <div className="index-page-box">
-                这里是首页
-                <Card onClick={this.handleClick} />
+                <IndexNav />
+                <div className="content">
+                    <div className="left">left</div>
+                    <div className="right">right</div>
+                </div>
             </div>
         );
     }

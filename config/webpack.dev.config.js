@@ -18,6 +18,8 @@ const webpackConfigDev = {
             'process.env.NODE_ENV': JSON.stringify('development'),
             IS_DEVELOPMETN: true,
         }),
+        // 热更新替换
+        // new webpack.HotModuleReplacementPlugin(),
         // 将打包后的资源注入到html文件内
         new HtmlWebpackPlugin({
             inject: 'body',
@@ -33,7 +35,8 @@ const webpackConfigDev = {
     devServer: {
         contentBase: concatPath('../app'),
         historyApiFallback: false,
-        hot: false,
+        hot: true,
+        compress: true,
         host: '0.0.0.0',
         port: PORT,
     },

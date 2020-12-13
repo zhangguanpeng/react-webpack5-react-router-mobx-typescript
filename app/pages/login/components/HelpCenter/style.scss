@@ -1,0 +1,32 @@
+.helpcenter-component-box {
+    .helpcenter-header {
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 30px;
+        font-family: PingFangSC-Regular;
+    }
+    .helpcenter-body {
+        display: flex;
+        margin-left: 30px;
+        margin-top: 30px;
+        .help-item-box {
+            flex: 1;
+
+            .help-item-title {
+                font-size: 14px;
+                font-weight: 600;
+                font-family: PingFangSC-Regular;
+                margin-bottom: 9px;
+            }
+            .help-item-child {
+                font-size: 12px;
+                height: 28px;
+                line-height: 28px;
+                a {
+                    color: #999;
+                    text-decoration: none
+                }
+            }
+        }
+    }
+}

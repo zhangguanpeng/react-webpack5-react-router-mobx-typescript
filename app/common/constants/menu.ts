@@ -1,7 +1,7 @@
-const MENU_CONFIG = [
+export const MENU_CONFIG = [
     {
         name: '营销资源',
-        children: [
+        menuChildren: [
             {
                 label: '百度APP',
                 url: '',
@@ -26,7 +26,7 @@ const MENU_CONFIG = [
     },
     {
         name: '营销产品',
-        children: [
+        menuChildren: [
             {
                 label: '百度APP',
                 url: '',
@@ -43,11 +43,11 @@ const MENU_CONFIG = [
     },
     {
         name: '解决方案',
-        children: [],
+        menuChildren: [],
     },
     {
         name: '营销图谱',
-        children: [
+        menuChildren: [
             {
                 label: '百度APP',
                 url: '',
@@ -60,7 +60,7 @@ const MENU_CONFIG = [
     },
     {
         name: '产品图谱',
-        children: [
+        menuChildren: [
             {
                 label: '百度APP',
                 url: '',
@@ -73,4 +73,29 @@ const MENU_CONFIG = [
     },
 ];
 
-export default MENU_CONFIG;
+export const MENU_FOOTER_CONFIG = [
+    {
+        title: '百度营销平台',
+        link: '',
+    },
+    {
+        title: '积木鱼',
+        link: '',
+    },
+    {
+        title: '爱翻翻',
+        link: '',
+    },
+    {
+        title: '百度统计',
+        link: '',
+    },
+    {
+        title: '营销服务市场',
+        link: '',
+    },
+    {
+        title: '营销服务中心',
+        link: '',
+    },
+];

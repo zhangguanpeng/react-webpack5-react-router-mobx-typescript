@@ -1,0 +1,85 @@
+.topics-component-box {
+    padding: 30px 0 16px;
+
+    .topics-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 30px;
+            font-family: PingFangSC-Regular;
+        }
+        .more {
+            position: relative;
+            margin-right: 39px;
+            cursor: pointer;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -8px;
+                top: 8px;
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid #999;
+                border-right: 1px solid #999;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .topics-body {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+}
+
+.tocpiccard-component-box {
+    width: 340px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+        font-family: PingFangSC-Regular;
+        width: 230px;
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+
+            span {
+                font-size: 16px;
+                font-weight: 100;
+                margin-left: 5px;
+            }
+        }
+        .desc {
+            font-size: 12px;
+            color: rgb(134, 134, 134);
+        }
+        .jump-btn {
+            margin-top: 15px;
+
+            button {
+                font-size: 12px;
+                border: 1px solid #999;
+            }
+        }
+    }
+    .right {
+        width: 90px;
+        height: 90px;
+        border-radius: 45px;
+        background: #999;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+}

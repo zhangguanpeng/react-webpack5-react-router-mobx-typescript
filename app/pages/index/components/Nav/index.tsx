@@ -1,6 +1,6 @@
 import React from 'react';
 import { MENU_CONFIG } from 'common/constants/menu';
-import MenuItem from './components/MenuItem/index';
+import MenuItem from './MenuItem';
 import './style.scss';
 
 interface IProps {
@@ -8,7 +8,7 @@ interface IProps {
 }
 interface IStates {}
 
-class Nav extends React.Component<IProps, IStates> {
+class IndexNav extends React.Component<IProps, IStates> {
     state = {}
 
     componentDidMount() {}
@@ -23,7 +23,7 @@ class Nav extends React.Component<IProps, IStates> {
     render() {
         return (
             <div
-                className="nav-component-box"
+                className="index-nav-component-box"
             >
                 <div className="logo"> </div>
                 <div className="menu">
@@ -41,4 +41,4 @@ class Nav extends React.Component<IProps, IStates> {
     }
 }
 
-export default Nav;
+export default IndexNav;

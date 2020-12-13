@@ -1,4 +1,46 @@
 .login-page-box {
     width: 1180px;
     margin: 0 auto;
+    .banner-login-box {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .banner-wrap {
+            width: 830px;
+            height: 335px;
+        }
+        .login-wrap {
+            width: 330px;
+            height: 335px;
+            background: #fff;
+            padding: 15px 30px;
+            position: relative;
+        }
+    }
+    .hot-topic-box {
+        margin-top: 20px;
+        background: #fff;
+    }
+    .marketing-box {
+        margin-top: 20px;
+        background: #fff;
+        height: 240px;
+        overflow: hidden;
+    }
+    .help-center-box {
+        margin-top: 20px;
+        background: #fff;
+        padding: 30px 0;
+    }
+    .market-tool-box {
+        margin-top: 20px;
+        background: #fff;
+        padding: 15px 0px;
+    }
+    .footer-box {
+        margin-top: 20px;
+        padding: 15px 0 24px;
+    }
 }

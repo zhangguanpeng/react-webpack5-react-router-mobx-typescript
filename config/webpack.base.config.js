@@ -24,6 +24,7 @@ const webpackConfBase = {
         alias: {
             pages: path.join(__dirname, '../app/pages'),
             common: path.join(__dirname, '../app/common'),
+            assets: path.join(__dirname, '../app/assets'),
         },
     },
     module: {
