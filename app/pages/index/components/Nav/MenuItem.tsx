@@ -1,14 +1,14 @@
 import React from 'react';
+/* eslint-disable */
+import { ShareAltOutlined } from '@ant-design/icons';
 import { menuItemInfoType } from './types';
 import './style.scss';
 
 interface IProps {
+    isActive?: boolean;
     onClick?: () => void;
     menuItemInfo: menuItemInfoType;
 }
-// interface IStates {
-//     message: string;
-// }
 
 class MenuItem extends React.Component<IProps> {
     componentDidMount() {}
@@ -21,13 +21,23 @@ class MenuItem extends React.Component<IProps> {
     }
 
     render() {
-        const { menuItemInfo } = this.props;
+        const { menuItemInfo, isActive } = this.props;
         return (
             <div
-                className="menuItem-component-box"
+                className="index-menuItem-component-box"
             >
-                <div className="menuItem-title">{menuItemInfo.name}</div>
+                <div className="menuItem-title">
+                    {menuItemInfo.name}
+                    {
+                        menuItemInfo.menuChildren.length > 0 && (<span className="arrow-icon"> </span>)
+                    }
+                </div>
                 <div className="bottom-line"> </div>
+                {
+                    isActive && (
+                        <div className="bottom-line-active"> </div>
+                    )
+                }
                 {
                     menuItemInfo.menuChildren.length > 0 && (
                         <div className="menuChildren-box">
@@ -38,6 +48,7 @@ class MenuItem extends React.Component<IProps> {
                                         key={`menu-child${index.toString()}`}
                                     >
                                         <a href={menuChild.url}>{menuChild.label}</a>
+                                        <ShareAltOutlined />
                                     </div>
                                 ))
                             }

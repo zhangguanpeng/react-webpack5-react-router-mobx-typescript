@@ -2,15 +2,73 @@
     
     .content {
         width: 1220px;
-        margin: 0 auto;
+        margin: 25px auto 0;
         display: flex;
         justify-content: space-between;
         .left {
-            width: 910px;
-
+            width: 909px;
+            .statisticchart-box {
+                height: 437px;
+                background-color: #ffffff;
+                padding: 18px 20px 2px;
+                border-radius: 8px;
+                box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
+            }
+            .promotion-box {
+                margin-top: 22px;
+                height: 164px;
+                background-color: #ffffff;
+                padding: 18px 20px 2px;
+                border-radius: 8px;
+                box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
+            }
+            .service-box {
+                margin-top: 22px;
+                height: 345px;
+                background-color: #ffffff;
+                padding: 18px 20px 2px;
+                border-radius: 8px;
+                box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
+            }
         }
         .right {
-            width: 290px;
+            width: 288px;
+            .account-box {
+                height: 267px;
+                background-color: #ffffff;
+                padding: 18px 20px 2px;
+                border-radius: 8px;
+                box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
+            }
+            .carousel-box {
+                height: 153px;
+                border-radius: 8px;
+                background-color: #ffffff;
+                margin-top: 18px;
+            }
+            .productnews-box {
+                height: 532px;
+                border-radius: 8px;
+                background-color: #ffffff;
+                margin-top: 20px;
+            }
         }
+        .box-header {
+            height: 32px;
+            line-height: 32px;
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                font-size: 21px;
+            }
+        }
+    }
+    .footer {
+        font-size: 12px;
+        text-align: center;
+        color: #848b99;
+        height: 64px;
+        line-height: 64px;
     }
 }

@@ -73,6 +73,69 @@ export const MENU_CONFIG = [
     },
 ];
 
+export const MENU_INDEX_CONFIG = [
+    {
+        name: '首页',
+        menuChildren: [],
+        isActive: true,
+    },
+    {
+        name: '数据中心',
+        menuChildren: [],
+        isActive: false,
+    },
+    {
+        name: '营销大学',
+        menuChildren: [
+            {
+                label: '产品图谱',
+                url: '',
+            },
+            {
+                label: '案例锦集',
+                url: '',
+            },
+            {
+                label: '百度认证',
+                url: '',
+            },
+            {
+                label: '帮助中心',
+                url: '',
+            },
+        ],
+        isActive: false,
+    },
+    {
+        name: '账户中心',
+        menuChildren: [],
+        isActive: false,
+    },
+    {
+        name: '财务中心',
+        menuChildren: [],
+        isActive: false,
+    },
+    {
+        name: '平台工具',
+        menuChildren: [
+            {
+                label: '百度营销API',
+                url: '',
+            },
+            {
+                label: '百度营销客户端',
+                url: '',
+            },
+            {
+                label: '百度营销手机版',
+                url: '',
+            },
+        ],
+        isActive: false,
+    },
+];
+
 export const MENU_FOOTER_CONFIG = [
     {
         title: '百度营销平台',

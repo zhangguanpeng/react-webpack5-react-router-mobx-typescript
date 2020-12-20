@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 // 用于将打包目录中上一次打包的文件清除
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -65,6 +64,7 @@ const webpackConfigProd = {
             protectWebpackAssets: true,
         }),
     ],
+    devtool: 'source-map',
 };
 
 module.exports = merge(webpackConfigBase, webpackConfigProd);
