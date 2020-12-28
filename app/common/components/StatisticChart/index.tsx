@@ -1,5 +1,6 @@
 import React from 'react';
 import CardTabs from '../CardTabs/index';
+import Chart from '../Chart/index';
 import './style.scss';
 
 interface IProps {
@@ -16,6 +17,11 @@ class StatisticChart extends React.Component<IProps, IStates> {
                 <div className="cartabs-box">
                     <CardTabs
                         cardData={cardData}
+                    />
+                </div>
+                <div className="chart-box">
+                    <Chart
+                        type="line"
                     />
                 </div>
             </div>

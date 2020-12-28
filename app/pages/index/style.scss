@@ -16,11 +16,6 @@
             }
             .promotion-box {
                 margin-top: 22px;
-                height: 164px;
-                background-color: #ffffff;
-                padding: 18px 20px 2px;
-                border-radius: 8px;
-                box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
             }
             .service-box {
                 margin-top: 22px;
@@ -58,6 +53,7 @@
             line-height: 32px;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 10px;
 
             .title {
                 font-size: 21px;

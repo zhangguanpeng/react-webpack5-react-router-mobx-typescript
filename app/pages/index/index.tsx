@@ -3,11 +3,37 @@ import { RouteComponentProps } from 'react-router-dom';
 import { Select } from 'antd';
 import StatisticChart from 'common/components/StatisticChart/index';
 import IndexNav from './components/Nav/index';
+import PromotionProduct from './components/PromotionProduct/index';
 import './style.scss';
 
 interface IProps extends RouteComponentProps {}
 
-const cardData:any = [];
+const cardData:any = [
+    {
+        id: 1,
+        name: '消费（元）',
+        value: 1,
+        persent: 88,
+        icon: 'assets/imgs/card-icon1.png',
+        isSelected: true,
+    },
+    {
+        id: 2,
+        name: '展现（次）',
+        value: 1,
+        persent: 88,
+        icon: 'assets/imgs/card-icon2.png',
+        isSelected: false,
+    },
+    {
+        id: 3,
+        name: '点击（次）',
+        value: 1,
+        persent: 88,
+        icon: 'assets/imgs/card-icon3.png',
+        isSelected: false,
+    },
+];
 const chartData:any = [];
 const { Option } = Select;
 class IndexPage extends Component<IProps> {
@@ -57,8 +83,14 @@ class IndexPage extends Component<IProps> {
                                 chartData={chartData}
                             />
                         </div>
-                        <div className="promotion-box">推广入口</div>
-                        <div className="service-box">营销服务</div>
+                        <div className="promotion-box">
+                            <PromotionProduct />
+                        </div>
+                        <div className="service-box">
+                            <div className="box-header">
+                                <div className="title">营销服务</div>
+                            </div>
+                        </div>
                     </div>
                     <div className="right">
                         <div className="account-box">账户</div>
