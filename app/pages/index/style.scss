@@ -36,16 +36,18 @@
                 box-shadow: 1px 1px 20px 0 rgba(183,183,188,.1);
             }
             .carousel-box {
-                height: 153px;
+                height: 148px;
                 border-radius: 8px;
                 background-color: #ffffff;
-                margin-top: 18px;
+                margin-top: 23px;
+                overflow: hidden;
             }
             .productnews-box {
                 height: 532px;
                 border-radius: 8px;
                 background-color: #ffffff;
                 margin-top: 20px;
+                padding: 18px 20px 0 20px;
             }
         }
         .box-header {
@@ -57,6 +59,14 @@
 
             .title {
                 font-size: 21px;
+            }
+            .more {
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
